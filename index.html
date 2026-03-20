@@ -440,6 +440,15 @@ body::before { content: ''; position: fixed; inset: 0; background-image: radial-
 
   // Atualiza painel ao receber confirmação de outra aba
   window.addEventListener('storage', e => { if (e.key === KEY) atualizarPainel(); });
+// Faz a página rolar automaticamente para o formulário ao carregar
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const formulario = document.getElementById('formCard');
+      if (formulario) {
+        formulario.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 500);
+  });
 </script>
 </body>
 </html>
