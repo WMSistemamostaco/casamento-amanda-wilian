@@ -4,8 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Casamento Amanda & Wilian — 15.08.2026</title>
-  <link rel="icon" type="image/jpeg" href="capa-convite.jpeg">
-<!-- Meta tags Open Graph para WhatsApp -->
+<link rel="icon" type="image/jpeg" href="https://wmsistemamostaco.github.io/casamento-amanda-wilian/capa-convite.jpeg">
+
 <meta property="og:title" content="Casamento Amanda & Wilian 💍"/>
 <meta property="og:description" content="15 de agosto de 2026 • 15h00 • Matriz de Ibiporã"/>
 <meta property="og:type" content="website"/>
@@ -162,10 +162,8 @@ body::before { content: ''; position: fixed; inset: 0; background-image: radial-
 <body>
 <div class="container">
 
-  <!-- FOTO DE CAPA -->
-  <img src="capa-convite.jpg" alt="Amanda e Wilian" class="cover-photo"/>
+  <img src="https://wmsistemamostaco.github.io/casamento-amanda-wilian/capa-convite.jpeg" alt="Amanda e Wilian" class="cover-photo"/>
 
-  <!-- SHARE BAR -->
   <div class="share-bar">
     <div class="share-bar-label">Compartilhe com os convidados</div>
     <div class="share-url" id="shareUrl">—</div>
@@ -179,7 +177,6 @@ body::before { content: ''; position: fixed; inset: 0; background-image: radial-
     <div class="copy-msg" id="copyMsg"></div>
   </div>
 
-  <!-- CONVITE -->
   <div class="invite-card">
     <svg class="ornament orn-tl" viewBox="0 0 90 90" fill="none"><path d="M6 84 Q6 6 84 6" stroke="#9A7B4F" stroke-width="1.2" fill="none"/><path d="M18 84 Q18 18 84 18" stroke="#9A7B4F" stroke-width="0.6" fill="none"/><circle cx="6" cy="84" r="2.5" fill="#9A7B4F"/><circle cx="45" cy="9" r="2" fill="#9A7B4F"/><path d="M42 4 L45 9 L48 4" stroke="#9A7B4F" stroke-width="1" fill="none"/></svg>
     <svg class="ornament orn-tr" viewBox="0 0 90 90" fill="none"><path d="M6 84 Q6 6 84 6" stroke="#9A7B4F" stroke-width="1.2" fill="none"/><path d="M18 84 Q18 18 84 18" stroke="#9A7B4F" stroke-width="0.6" fill="none"/><circle cx="6" cy="84" r="2.5" fill="#9A7B4F"/></svg>
@@ -221,7 +218,6 @@ body::before { content: ''; position: fixed; inset: 0; background-image: radial-
     </p>
   </div>
 
-  <!-- FORMULÁRIO DE CONFIRMAÇÃO -->
   <div class="form-card" id="formCard">
     <div class="form-title">Confirme sua presença</div>
     <div class="field">
@@ -243,7 +239,6 @@ body::before { content: ''; position: fixed; inset: 0; background-image: radial-
     <div class="status-msg" id="statusMsg"></div>
   </div>
 
-  <!-- SUCESSO -->
   <div class="success-card" id="successCard">
     <div class="success-rings"><div class="ring"></div><div class="ring"></div></div>
     <div class="success-title" id="successTitle">Presença confirmada!</div>
@@ -254,12 +249,10 @@ body::before { content: ''; position: fixed; inset: 0; background-image: radial-
     </a>
   </div>
 
-  <!-- BOTÃO PAINEL -->
   <button class="painel-btn" onclick="abrirPainel()">⚙ Painel dos noivos</button>
 
 </div>
 
-<!-- MODAL PAINEL -->
 <div class="painel-overlay" id="painelOverlay" onclick="fecharPainelFora(event)">
   <div class="painel-modal">
     <div class="painel-header">
@@ -267,7 +260,6 @@ body::before { content: ''; position: fixed; inset: 0; background-image: radial-
       <button class="painel-close" onclick="fecharPainel()">×</button>
     </div>
 
-    <!-- TELA DE SENHA -->
     <div id="lockScreen" class="lock-screen">
       <span class="lock-label">Acesso restrito aos noivos</span>
       <input type="password" class="lock-input" id="senhaInput" placeholder="••••••" maxlength="20" onkeydown="if(event.key==='Enter')verificarSenha()"/>
@@ -275,7 +267,6 @@ body::before { content: ''; position: fixed; inset: 0; background-image: radial-
       <div class="lock-error" id="lockError"></div>
     </div>
 
-    <!-- PAINEL DESBLOQUEADO -->
     <div id="painelContent" style="display:none;">
       <div class="stats-row">
         <div class="stat"><span class="stat-num" id="totalConf">0</span><span class="stat-lbl">Confirmados</span></div>
@@ -440,14 +431,15 @@ body::before { content: ''; position: fixed; inset: 0; background-image: radial-
 
   // Atualiza painel ao receber confirmação de outra aba
   window.addEventListener('storage', e => { if (e.key === KEY) atualizarPainel(); });
-// Faz a página rolar automaticamente para o formulário ao carregar
+  
+  // Rolar automaticamente para o formulário
   window.addEventListener('load', () => {
     setTimeout(() => {
       const formulario = document.getElementById('formCard');
       if (formulario) {
         formulario.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 500);
+    }, 800);
   });
 </script>
 </body>
