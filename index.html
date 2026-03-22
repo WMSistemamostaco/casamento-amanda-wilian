@@ -65,6 +65,11 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 .success-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--dark);margin-bottom:0.5rem;}
 .success-msg{font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:1.5rem;font-style:italic;}
 .btn-wpp-confirm{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;background:#25D366;color:white;border:none;border-radius:8px;cursor:pointer;text-decoration:none;}
+.presentes-card{background:white;border:1px solid var(--light);border-radius:16px;padding:1.75rem;margin-bottom:1.5rem;text-align:center;}
+.presentes-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;}
+.presentes-msg{font-size:14px;color:var(--mid);font-style:italic;line-height:1.6;margin-bottom:1.25rem;}
+.btn-presentes{display:inline-flex;align-items:center;gap:8px;padding:11px 28px;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;background:transparent;border:1.5px solid var(--gold);color:var(--gold);border-radius:8px;cursor:pointer;text-decoration:none;transition:background 0.2s,color 0.2s;}
+.btn-presentes:hover{background:var(--gold);color:white;}
 .painel-btn{width:100%;padding:10px;font-size:13px;letter-spacing:0.1em;background:transparent;border:1px solid var(--light);color:var(--mid);border-radius:8px;cursor:pointer;margin-bottom:1rem;transition:background 0.2s;}
 .painel-btn:hover{background:var(--gold-pale);}
 .painel-overlay{display:none;position:fixed;inset:0;background:rgba(44,36,22,0.6);z-index:1000;align-items:center;justify-content:center;padding:1rem;}
@@ -110,8 +115,6 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 <body>
 <div class="container">
   <img src="https://wmsistemamostaco.github.io/casamento-amanda-wilian/capa-convite.jpeg" alt="Amanda e Wilian" class="cover-photo"/>
-  <div class="share-bar">
-    <div class="share-bar-label">Compartilhe com os convidados</div>
     <div class="share-url" id="shareUrl">—</div>
     <div class="share-btns">
       <button class="btn-copy" onclick="copyLink()">Copiar link</button>
@@ -144,6 +147,14 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
     </div>
     <div class="divider"><div class="div-line"></div><div class="div-diamond"></div><div class="div-line"></div></div>
     <p class="verse">"O amor é paciente, o amor é bondoso... tudo suporta, tudo crê, tudo espera, tudo persevera."<cite>1 Coríntios 13:4–7</cite></p>
+  </div>
+  <div class="presentes-card">
+    <div class="presentes-label">Lista de Presentes</div>
+    <p class="presentes-msg">Sua presença é o nosso maior presente! Mas se quiser nos presentear, acesse nossa lista abaixo.</p>
+    <a class="btn-presentes" href="https://noivos.casar.com/amanda-e-wilian" target="_blank">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+      Ver Lista de Presentes
+    </a>
   </div>
   <div class="form-card" id="formCard">
     <div class="form-title">Confirme sua presença</div>
@@ -211,12 +222,8 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 <script>
 emailjs.init('h33oxWzwErwi8kwUF');
 var WPP='5543988145521',SENHA='amanda2026',KEY='wedding_aw2026_guests';
-var url=window.location.href;
-document.getElementById('shareUrl').textContent=url;
 function getGuests(){try{return JSON.parse(localStorage.getItem(KEY)||'[]');}catch(e){return[];}}
 function saveGuests(l){localStorage.setItem(KEY,JSON.stringify(l));}
-function copyLink(){navigator.clipboard.writeText(url).then(function(){document.getElementById('copyMsg').textContent='Link copiado!';setTimeout(function(){document.getElementById('copyMsg').textContent='';},2500);});}
-function shareWpp(){var msg=encodeURIComponent('💍 *Casamento Amanda & Wilian*\n\n📅 15 de agosto de 2026 — Sábado às 15h00\n📍 Matriz de Ibiporã — Nossa Senhora da Paz\n\nConfirme sua presença pelo link:\n'+url);window.open('https://wa.me/?text='+msg,'_blank');}
 async function confirmar(){
   var name=document.getElementById('guestName').value.trim();
   var countVal=document.getElementById('guestCount').value;
