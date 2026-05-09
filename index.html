@@ -39,6 +39,7 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 .location-sub{font-size:13px;color:var(--mid);font-style:italic;margin-top:2px;}
 .verse{font-size:14px;font-style:italic;color:var(--mid);line-height:1.8;max-width:360px;margin:0 auto;}
 .verse cite{display:block;font-size:11px;font-style:normal;letter-spacing:0.1em;color:var(--gold);margin-top:6px;text-transform:uppercase;}
+.farewell{display:block;font-size:15px;font-weight:500;color:var(--dark);margin-top:15px;font-style:normal;}
 .form-card{background:white;border:1px solid var(--light);border-radius:16px;padding:2rem 1.75rem;margin-bottom:1.5rem;}
 .form-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--dark);text-align:center;margin-bottom:1.5rem;}
 .field{margin-bottom:1.1rem;}
@@ -99,7 +100,7 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 .btn-refresh:hover{opacity:0.88;}
 .last-update{font-size:11px;color:var(--mid);text-align:center;font-style:italic;margin-top:8px;min-height:16px;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-.invite-card,.form-card,.form-card{animation-delay:0.15s;}
+.invite-card,.form-card{animation: fadeUp 0.6s ease-out forwards;}
 @media(max-width:480px){.name{font-size:42px;}.amp{font-size:52px;}.container{padding:1rem 1rem 2.5rem;}.invite-card{padding:2.5rem 1.25rem;}}
 </style>
 </head>
@@ -127,7 +128,11 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
       <div class="location-sub">Nossa Senhora da Paz</div>
     </div>
     <div class="divider"><div class="div-line"></div><div class="div-diamond"></div><div class="div-line"></div></div>
-    <p class="verse">"O amor é paciente, o amor é bondoso... tudo suporta, tudo crê, tudo espera, tudo persevera."<cite>1 Coríntios 13:4–7</cite></p>
+    <p class="verse">
+        "O amor é paciente, o amor é bondoso... tudo suporta, tudo crê, tudo espera, tudo persevera."
+        <cite>1 Coríntios 13:4–7</cite>
+        <span class="farewell">Os noivos se despedem na igreja!</span>
+    </p>
   </div>
   <div class="presentes-card">
     <div class="presentes-label">Lista de Presentes</div>
