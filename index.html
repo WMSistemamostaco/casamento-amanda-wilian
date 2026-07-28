@@ -11,6 +11,12 @@
 <meta property="og:image" content="https://wmsistemamostaco.github.io/casamento-2026/capa-convite.jpeg"/>
 <meta property="og:image:type" content="image/jpeg"/>
 <meta name="theme-color" content="#9A7B4F"/>
+
+<!-- Fontes Caligráficas e Elegantes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
 <style>
 :root{--gold:#9A7B4F;--gold-light:#C9A96E;--gold-pale:#F5EFE4;--cream:#FAF7F2;--dark:#2C2416;--mid:#6B5B3E;--light:#E8DFD0;}
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -18,12 +24,17 @@ body{background:var(--cream);font-family:'EB Garamond',Georgia,serif;color:var(-
 body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 20% 20%,rgba(154,123,79,0.06) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(154,123,79,0.06) 0%,transparent 50%);pointer-events:none;z-index:0;}
 .container{max-width:560px;margin:0 auto;padding:2rem 1.25rem 3rem;position:relative;z-index:1;}
 .cover-photo{width:100%;height:auto;border-radius:16px;margin-bottom:1.5rem;display:block;border:1px solid var(--light);}
-.invite-card{background:white;border:1px solid var(--light);border-radius:16px;padding:3rem 2rem;text-align:center;margin-bottom:1.5rem;position:relative;overflow:hidden;}
-.ornament{position:absolute;width:90px;height:90px;opacity:0.2;}
+
+/* Estilo do Convite Clássico */
+.invite-card{background:white;border:1px solid var(--light);border-radius:16px;padding:3rem 2rem;text-align:center;margin-bottom:1.5rem;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.02);}
+.ornament{position:absolute;width:90px;height:90px;opacity:0.25;}
 .orn-tl{top:0;left:0;}.orn-tr{top:0;right:0;transform:scaleX(-1);}.orn-bl{bottom:0;left:0;transform:scaleY(-1);}.orn-br{bottom:0;right:0;transform:scale(-1);}
-.eyelet{display:inline-block;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--mid);margin-bottom:1.5rem;}
-.name{font-family:'Cormorant Garamond',Georgia,serif;font-size:52px;font-weight:300;color:var(--dark);line-height:1.1;display:block;}
-.amp{font-family:'Cormorant Garamond',Georgia,serif;font-size:64px;font-style:italic;font-weight:300;color:var(--gold);display:block;line-height:1;margin:0.1rem 0;}
+.eyelet{display:inline-block;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--mid);margin-bottom:1.2rem;font-weight:500;}
+
+/* Fonte desenhada/manuscrita */
+.name{font-family:'Alex Brush',cursive;font-size:68px;font-weight:400;color:var(--dark);line-height:1;display:block;}
+.amp{font-family:'Alex Brush',cursive;font-size:52px;color:var(--gold);display:block;line-height:0.8;margin:0.2rem 0;}
+
 .divider{display:flex;align-items:center;gap:12px;margin:1.5rem auto;max-width:300px;}
 .div-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold-light),transparent);}
 .div-diamond{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);}
@@ -31,264 +42,225 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 .detail-sep{background:var(--light);}
 .detail{padding:0.5rem 1rem;text-align:center;}
 .detail-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:4px;}
-.detail-value{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:var(--dark);line-height:1.3;}
+.detail-value{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--dark);line-height:1.3;}
 .detail-sub{font-size:12px;color:var(--mid);font-style:italic;margin-top:2px;}
 .location-block{margin-bottom:1.5rem;}
 .location-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
-.location-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--dark);}
+.location-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--dark);}
 .location-sub{font-size:13px;color:var(--mid);font-style:italic;margin-top:2px;}
 .btn-maps{display:inline-flex;align-items:center;gap:6px;padding:9px 22px;margin-top:14px;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;background:transparent;border:1.5px solid var(--gold-light);color:var(--mid);border-radius:30px;text-decoration:none;transition:background 0.2s,color 0.2s;}
 .btn-maps:hover{background:var(--gold);color:white;border-color:var(--gold);}
-.farewell-note{font-size:13px;color:var(--mid);font-style:italic;margin-top:12px;}
 .verse{font-size:14px;font-style:italic;color:var(--mid);line-height:1.8;max-width:360px;margin:0 auto;}
 .verse cite{display:block;font-size:11px;font-style:normal;letter-spacing:0.1em;color:var(--gold);margin-top:6px;text-transform:uppercase;}
+
+/* Card de Presentes */
+.presentes-card{background:white;border:1px solid var(--light);border-radius:16px;padding:1.75rem;margin-bottom:1.5rem;text-align:center;}
+.presentes-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;}
+.presentes-msg{font-size:14px;color:var(--mid);font-style:italic;line-height:1.6;margin-bottom:1.25rem;}
+.btn-presentes{display:inline-flex;align-items:center;gap:8px;padding:11px 28px;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;background:transparent;border:1.5px solid var(--gold);color:var(--gold);border-radius:8px;cursor:pointer;text-decoration:none;transition:background 0.2s,color 0.2s;}
+.btn-presentes:hover{background:var(--gold);color:white;}
+
+/* Formulário Integrado e Funcional */
 .form-card{background:white;border:1px solid var(--light);border-radius:16px;padding:2rem 1.75rem;margin-bottom:1.5rem;}
-.form-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--dark);text-align:center;margin-bottom:1.5rem;}
-.field{margin-bottom:1.1rem;}
-.field label{display:block;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:var(--dark);text-align:center;margin-bottom:0.25rem;}
+.form-subtitle{font-size:13px;color:var(--mid);text-align:center;font-style:italic;margin-bottom:1.5rem;}
+.field{margin-bottom:1.2rem;}
+.field label{display:block;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;font-weight:500;}
 .field input,.field select{width:100%;font-family:'EB Garamond',serif;font-size:16px;padding:10px 14px;border:1px solid var(--light);border-radius:8px;background:var(--cream);color:var(--dark);outline:none;appearance:none;transition:border-color 0.2s;}
 .field input:focus,.field select:focus{border-color:var(--gold);}
-.field input::placeholder{color:#BBA98A;}
-.btn-confirm{width:100%;padding:13px;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;letter-spacing:0.1em;background:var(--gold);color:white;border:none;border-radius:8px;cursor:pointer;transition:background 0.2s,transform 0.1s;margin-top:0.5rem;}
+
+/* Blocos de Escolha (Igreja e Pizzaria) */
+.rsvp-block{background:var(--gold-pale);border:1px solid var(--light);border-radius:12px;padding:1.1rem;margin-bottom:1.2rem;}
+.rsvp-block-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--dark);margin-bottom:4px;display:flex;align-items:center;gap:6px;}
+.rsvp-block-desc{font-size:12px;color:var(--mid);line-height:1.5;margin-bottom:10px;}
+.toggle-row{display:flex;gap:10px;margin-bottom:10px;}
+.toggle-btn{flex:1;padding:8px;font-family:'EB Garamond',serif;font-size:14px;border:1px solid var(--light);background:white;color:var(--dark);border-radius:6px;cursor:pointer;text-align:center;transition:all 0.2s;}
+.toggle-btn.active{background:var(--gold);color:white;border-color:var(--gold);font-weight:500;}
+
+.btn-confirm{width:100%;padding:14px;font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;letter-spacing:0.1em;background:var(--gold);color:white;border:none;border-radius:8px;cursor:pointer;transition:background 0.2s;margin-top:0.5rem;}
 .btn-confirm:hover{background:var(--gold-light);}
 .btn-confirm:disabled{opacity:0.5;cursor:not-allowed;}
 .status-msg{font-size:13px;color:var(--mid);text-align:center;margin-top:0.75rem;min-height:20px;font-style:italic;}
+
+/* Tela de Sucesso */
 .success-card{display:none;background:white;border:1px solid var(--light);border-radius:16px;padding:2.5rem 1.75rem;text-align:center;margin-bottom:1.5rem;}
 .success-rings{display:flex;justify-content:center;gap:4px;margin-bottom:1.25rem;}
 .ring{width:36px;height:36px;border-radius:50%;border:2.5px solid var(--gold);}
 .ring:last-child{margin-left:-10px;}
 .success-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--dark);margin-bottom:0.5rem;}
 .success-msg{font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:1.5rem;font-style:italic;}
-.btn-wpp-confirm{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;background:#25D366;color:white;border:none;border-radius:8px;cursor:pointer;text-decoration:none;}
-.btn-pizzaria{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;background:var(--gold);color:white;border:none;border-radius:8px;cursor:pointer;margin-top:0.75rem;transition:background 0.2s;}
-.btn-pizzaria:hover{background:var(--gold-light);}
-.reception-card{background:white;border:1px solid var(--light);border-radius:16px;padding:2rem 1.75rem;margin-bottom:1.5rem;text-align:center;}
-.reception-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:0.5rem;}
-.reception-title{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:500;color:var(--dark);margin-bottom:0.85rem;}
-.reception-text{font-size:14px;color:var(--mid);line-height:1.7;max-width:400px;margin:0 auto 1rem;}
-.reception-text b{color:var(--dark);font-weight:600;}
-.reception-menu{font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.6rem;}
-.reception-list{list-style:none;font-size:15px;color:var(--dark);margin:0 auto 1.1rem;text-align:left;display:inline-block;font-family:'Cormorant Garamond',serif;}
-.reception-list li{padding:3px 0;}
-.reception-prices{background:var(--gold-pale);border-radius:10px;padding:0.85rem 1rem;margin-bottom:1.1rem;font-size:14px;color:var(--dark);line-height:1.7;}
-.reception-prices b{color:var(--gold);}
-.reception-deadline{font-size:13px;color:var(--mid);font-style:italic;line-height:1.7;margin-bottom:1.1rem;}
-.reception-closing{font-size:14px;color:var(--mid);font-style:italic;margin-top:1rem;}
-.presentes-card{background:white;border:1px solid var(--light);border-radius:16px;padding:1.75rem;margin-bottom:1.5rem;text-align:center;}
-.presentes-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;}
-.presentes-msg{font-size:14px;color:var(--mid);font-style:italic;line-height:1.6;margin-bottom:1.25rem;}
-.btn-presentes{display:inline-flex;align-items:center;gap:8px;padding:11px 28px;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;background:transparent;border:1.5px solid var(--gold);color:var(--gold);border-radius:8px;cursor:pointer;text-decoration:none;transition:background 0.2s,color 0.2s;}
-.btn-presentes:hover{background:var(--gold);color:white;}
-.painel-btn{width:100%;padding:10px;font-size:13px;letter-spacing:0.1em;background:transparent;border:1px solid var(--light);color:var(--mid);border-radius:8px;cursor:pointer;margin-bottom:1rem;transition:background 0.2s;}
-.painel-btn:hover{background:var(--gold-pale);}
+.btn-wpp-confirm{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;background:#25D366;color:white;border:none;border-radius:8px;cursor:pointer;text-decoration:none;}
+
+/* Painel */
+.painel-btn{width:100%;padding:10px;font-size:13px;letter-spacing:0.1em;background:transparent;border:1px solid var(--light);color:var(--mid);border-radius:8px;cursor:pointer;margin-bottom:1rem;}
 .painel-overlay{display:none;position:fixed;inset:0;background:rgba(44,36,22,0.6);z-index:1000;align-items:center;justify-content:center;padding:1rem;}
 .painel-overlay.active{display:flex;}
 .painel-modal{background:var(--cream);border-radius:16px;padding:2rem;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;}
 .painel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;}
 .painel-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--dark);}
-.painel-close{background:none;border:none;font-size:22px;color:var(--mid);cursor:pointer;line-height:1;}
+.painel-close{background:none;border:none;font-size:22px;color:var(--mid);cursor:pointer;}
 .lock-screen{text-align:center;padding:1rem 0;}
-.lock-label{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;display:block;}
 .lock-input{width:100%;font-size:16px;padding:10px 14px;border:1px solid var(--light);border-radius:8px;background:white;color:var(--dark);outline:none;text-align:center;letter-spacing:0.2em;margin-bottom:0.75rem;}
-.lock-input:focus{border-color:var(--gold);}
 .btn-entrar{width:100%;padding:11px;font-family:'Cormorant Garamond',serif;font-size:17px;background:var(--gold);color:white;border:none;border-radius:8px;cursor:pointer;}
-.lock-error{font-size:13px;color:#c0392b;font-style:italic;margin-top:6px;min-height:18px;}
-.stats-row-title{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);margin:0.5rem 0 0.5rem;}
-.stats-row{display:flex;gap:8px;margin-bottom:1.25rem;}
+.stats-row-title{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);margin:0.8rem 0 0.4rem;}
+.stats-row{display:flex;gap:8px;margin-bottom:1rem;}
 .stat{flex:1;background:white;border:1px solid var(--light);border-radius:10px;padding:0.8rem 0.5rem;text-align:center;}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--gold);display:block;line-height:1;margin-bottom:3px;}
-.stat-lbl{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);}
-.progress-card{background:white;border:1px solid var(--light);border-radius:10px;padding:1rem 1.25rem;margin-bottom:1.25rem;}
-.progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
-.progress-label{font-size:12px;color:var(--mid);}
-.progress-pct{font-size:13px;font-weight:500;color:var(--gold);}
-.progress-bar{height:6px;background:var(--light);border-radius:3px;overflow:hidden;}
-.progress-fill{height:100%;background:var(--gold);border-radius:3px;transition:width 0.5s ease;}
-.add-section{background:white;border:1px solid var(--light);border-radius:10px;padding:1rem;margin-bottom:1rem;}
-.add-title{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--dark);margin-bottom:0.75rem;}
-.add-row{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;}
-.add-field{flex:1;min-width:130px;}
-.add-field label{display:block;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:4px;}
-.add-field input,.add-field select{width:100%;font-family:'EB Garamond',serif;font-size:14px;padding:9px 10px;border:1px solid var(--light);border-radius:7px;background:var(--cream);color:var(--dark);outline:none;appearance:none;}
-.add-checkbox{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);margin:10px 0;}
-.btn-add{width:100%;padding:9px 18px;background:#27ae60;color:white;border:none;border-radius:7px;cursor:pointer;font-family:'EB Garamond',serif;font-size:14px;white-space:nowrap;transition:background 0.2s;}
-.btn-add:hover{background:#219a52;}
-.add-msg{font-size:12px;margin-top:6px;font-style:italic;min-height:16px;}
-.guest-card{background:white;border:1px solid var(--light);border-radius:10px;padding:1rem 1.25rem;margin-bottom:1rem;}
-.guest-card-title{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;}
-.guest-list{list-style:none;max-height:240px;overflow-y:auto;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--gold);display:block;}
+.stat-lbl{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);}
+.guest-list{list-style:none;max-height:220px;overflow-y:auto;}
 .guest-item{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--light);font-size:13px;gap:6px;}
-.guest-item:last-child{border-bottom:none;}
-.guest-name{color:var(--dark);flex:1;}
-.guest-badge{font-size:11px;background:var(--gold-pale);border:1px solid var(--gold);color:var(--gold);padding:2px 8px;border-radius:20px;white-space:nowrap;}
-.guest-remove{background:none;border:none;color:#c0392b;font-size:16px;line-height:1;cursor:pointer;padding:0 2px;flex-shrink:0;}
-.guest-remove:hover{opacity:0.7;}
-.empty-msg{font-size:13px;color:var(--mid);text-align:center;padding:1.5rem 0;font-style:italic;}
-.painel-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:0.5rem;}
-.btn-painel{flex:1;padding:11px;font-family:'EB Garamond',serif;font-size:13px;border:none;border-radius:8px;cursor:pointer;transition:background 0.2s;color:white;}
-.last-update{font-size:11px;color:var(--mid);text-align:center;font-style:italic;margin-top:8px;min-height:16px;}
+.guest-badge{font-size:10px;background:var(--gold-pale);border:1px solid var(--gold);color:var(--gold);padding:2px 6px;border-radius:12px;}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 .invite-card,.form-card{animation: fadeUp 0.6s ease-out forwards;}
-@media(max-width:480px){.name{font-size:42px;}.amp{font-size:52px;}.container{padding:1rem 1rem 2.5rem;}.invite-card{padding:2.5rem 1.25rem;}}
+@media(max-width:480px){.name{font-size:56px;}.amp{font-size:42px;}.container{padding:1rem 1rem 2.5rem;}}
 </style>
 </head>
 <body>
 <div class="container">
   <img src="capa-convite.jpeg" alt="Amanda e Wilian" class="cover-photo"/>
+  
   <div class="invite-card">
-    <svg class="ornament orn-tl" viewBox="0 0 90 90" fill="none"><path d="M6 84 Q6 6 84 6" stroke="#9A7B4F" stroke-width="1.2" fill="none"/><path d="M18 84 Q18 18 84 18" stroke="#9A7B4F" stroke-width="0.6" fill="none"/><circle cx="6" cy="84" r="2.5" fill="#9A7B4F"/><circle cx="45" cy="9" r="2" fill="#9A7B4F"/><path d="M42 4 L45 9 L48 4" stroke="#9A7B4F" stroke-width="1" fill="none"/></svg>
+    <svg class="ornament orn-tl" viewBox="0 0 90 90" fill="none"><path d="M6 84 Q6 6 84 6" stroke="#9A7B4F" stroke-width="1.2" fill="none"/><path d="M18 84 Q18 18 84 18" stroke="#9A7B4F" stroke-width="0.6" fill="none"/><circle cx="6" cy="84" r="2.5" fill="#9A7B4F"/></svg>
     <svg class="ornament orn-tr" viewBox="0 0 90 90" fill="none"><path d="M6 84 Q6 6 84 6" stroke="#9A7B4F" stroke-width="1.2" fill="none"/><path d="M18 84 Q18 18 84 18" stroke="#9A7B4F" stroke-width="0.6" fill="none"/><circle cx="6" cy="84" r="2.5" fill="#9A7B4F"/></svg>
     <svg class="ornament orn-bl" viewBox="0 0 90 90" fill="none"><path d="M6 84 Q6 6 84 6" stroke="#9A7B4F" stroke-width="1.2" fill="none"/><path d="M18 84 Q18 18 84 18" stroke="#9A7B4F" stroke-width="0.6" fill="none"/><circle cx="6" cy="84" r="2.5" fill="#9A7B4F"/></svg>
     <svg class="ornament orn-br" viewBox="0 0 90 90" fill="none"><path d="M6 84 Q6 6 84 6" stroke="#9A7B4F" stroke-width="1.2" fill="none"/><path d="M18 84 Q18 18 84 18" stroke="#9A7B4F" stroke-width="0.6" fill="none"/><circle cx="6" cy="84" r="2.5" fill="#9A7B4F"/></svg>
+    
     <span class="eyelet">Casamento</span>
     <span class="name">Amanda</span>
     <span class="amp">&amp;</span>
     <span class="name">Wilian</span>
+    
     <div class="divider"><div class="div-line"></div><div class="div-diamond"></div><div class="div-line"></div></div>
+    
     <div class="details-grid">
       <div class="detail"><div class="detail-label">Data</div><div class="detail-value">15 de agosto<br>de 2026</div><div class="detail-sub">Sábado</div></div>
       <div class="detail-sep"></div>
       <div class="detail"><div class="detail-label">Horário</div><div class="detail-value">15h00</div><div class="detail-sub">Pontualmente</div></div>
     </div>
+    
     <div class="location-block">
-      <div class="location-label">Local da cerimônia</div>
+      <div class="location-label">Cerimônia Religiosa</div>
       <div class="location-name">Matriz de Ibiporã</div>
       <div class="location-sub">Nossa Senhora da Paz</div>
       <a class="btn-maps" href="https://maps.app.goo.gl/5kxW93DXSLyDcDQ66" target="_blank">📍 Me leve até lá</a>
-      <div class="farewell-note">Os noivos se despedem na igreja</div>
     </div>
+    
     <div class="divider"><div class="div-line"></div><div class="div-diamond"></div><div class="div-line"></div></div>
+    
     <p class="verse">
         "O amor é paciente, o amor é bondoso... tudo suporta, tudo crê, tudo espera, tudo persevera."
         <cite>1 Coríntios 13:4–7</cite>
     </p>
   </div>
+
+  <!-- Lista de Presentes -->
   <div class="presentes-card">
     <div class="presentes-label">Lista de Presentes</div>
-    <p class="presentes-msg">Sua presença é o nosso maior presente! Mas se quiser nos presentear, acesse nossa lista abaixo.</p>
+    <p class="presentes-msg">Sua presença é o nosso maior presente! Caso queira nos presentear, acesse nossa lista virtual.</p>
     <a class="btn-presentes" href="https://noivos.casar.com/amanda-e-wilian" target="_blank">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
-      Ver Lista de Presentes
+      🎁 Ver Lista de Presentes
     </a>
   </div>
+
+  <!-- Formulário de Confirmação Unificado e Funcional -->
   <div class="form-card" id="formCard">
-    <div class="form-title">Confirme sua presença</div>
-    <div class="field"><label>Seu nome completo</label><input type="text" id="guestName" placeholder="Ex: Maria da Silva" maxlength="80"/></div>
+    <div class="form-title">Confirme sua Presença</div>
+    <p class="form-subtitle">Por favor, preencha os dados abaixo para nos organizarmos:</p>
+    
     <div class="field">
-      <label>Quantas pessoas da família virão? (incluindo você)</label>
-      <select id="guestCount">
-        <option value="1">1 pessoa — só eu</option>
-        <option value="2">2 pessoas</option>
-        <option value="3">3 pessoas</option>
-        <option value="4">4 pessoas</option>
-        <option value="5">5 pessoas</option>
-        <option value="6">6 pessoas ou mais</option>
-      </select>
+      <label>Seu Nome Completo</label>
+      <input type="text" id="guestName" placeholder="Ex: Maria da Silva" maxlength="80"/>
     </div>
+
+    <!-- Bloco 1: Igreja -->
+    <div class="rsvp-block">
+      <div class="rsvp-block-title">⛪ 1. Cerimônia na Igreja (15h00)</div>
+      <div class="rsvp-block-desc">Matriz de Ibiporã — Nossa Senhora da Paz</div>
+      <div class="toggle-row">
+        <button type="button" class="toggle-btn active" id="btnIgrejaSim" onclick="setIgreja(true)">Sim, irei</button>
+        <button type="button" class="toggle-btn" id="btnIgrejaNao" onclick="setIgreja(false)">Não poderei ir</button>
+      </div>
+      <div class="field" id="fieldIgrejaQtd" style="margin-bottom:0;">
+        <label>Quantas pessoas virão para a igreja?</label>
+        <select id="qtdIgreja">
+          <option value="1">1 pessoa (só eu)</option>
+          <option value="2">2 pessoas</option>
+          <option value="3">3 pessoas</option>
+          <option value="4">4 pessoas</option>
+          <option value="5">5 pessoas ou mais</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Bloco 2: Pizzaria -->
+    <div class="rsvp-block">
+      <div class="rsvp-block-title">🍕 2. Recepção na Pizzaria (18h30)</div>
+      <div class="rsvp-block-desc">Pizzaria O Casarão • R$ 58,90 por pessoa (Rodízio completo). Vagas limitadas.</div>
+      <div class="toggle-row">
+        <button type="button" class="toggle-btn" id="btnPizzaSim" onclick="setPizza(true)">Sim, iremos à pizzaria</button>
+        <button type="button" class="toggle-btn active" id="btnPizzaNao" onclick="setPizza(false)">Não iremos</button>
+      </div>
+      <div class="field" id="fieldPizzaQtd" style="display:none; margin-bottom:0;">
+        <label>Quantas pessoas para a pizzaria?</label>
+        <select id="qtdPizza">
+          <option value="1">1 pessoa</option>
+          <option value="2">2 pessoas</option>
+          <option value="3">3 pessoas</option>
+          <option value="4">4 pessoas</option>
+          <option value="5">5 pessoas ou mais</option>
+        </select>
+      </div>
+    </div>
+
     <button class="btn-confirm" id="confirmBtn" onclick="confirmar()">Confirmar Presença</button>
     <div class="status-msg" id="statusMsg"></div>
   </div>
+
+  <!-- Tela de Sucesso -->
   <div class="success-card" id="successCard">
     <div class="success-rings"><div class="ring"></div><div class="ring"></div></div>
-    <div class="success-title" id="successTitle">Presença confirmada!</div>
+    <div class="success-title">Presença Confirmada!</div>
     <div class="success-msg" id="successMsg"></div>
     <a class="btn-wpp-confirm" id="wppBtn" href="#" target="_blank">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Avisar os noivos pelo WhatsApp
+      📲 Enviar Confirmação pelo WhatsApp
     </a>
-    <br/>
-    <button class="btn-pizzaria" id="btnPizzaria" onclick="mostrarPizzaria()">🍕 Fui convidado(a) para a Pizzaria</button>
   </div>
-  <div class="reception-card" id="receptionCard" style="display:none;">
-    <div class="reception-label">É um convite especial!</div>
-    <div class="reception-title">Vamos continuar juntos? 🍕</div>
-    <p class="reception-text">Os noivos se despedem dos convidados na igreja, mas após a cerimônia, a partir das <b>18h30</b>, reservamos um espaço exclusivo na <b>Pizzaria O Casarão</b> (<a href="https://instagram.com/ocasaraotwohalfspizza" target="_blank" style="color:var(--gold);text-decoration:none;">@ocasaraotwohalfspizza</a>) para um grupo reduzido de <b>30 pessoas</b> especialmente convidadas para continuar a celebração ao lado de familiares e amigos mais próximos.</p>
-    <div class="reception-menu">O rodízio inclui</div>
-    <ul class="reception-list">
-      <li>• Pizzas</li>
-      <li>• Buffet de massas e petiscos</li>
-      <li>• Refrigerante</li>
-    </ul>
-    <div class="reception-prices">
-      Valor: <b>R$ 58,90</b> por pessoa<br>
-      Crianças de 4 a 7 anos: <b>R$ 29,95</b>
-    </div>
-    <p class="reception-deadline">Sua presença na pizzaria já está anotada! Pedimos só a gentileza de confirmar até o dia <b>08/08</b>, para que possamos nos organizar com a pizzaria.</p>
-    <p class="reception-closing">Será uma alegria celebrar esse dia ao seu lado!</p>
-  </div>
-  <button class="painel-btn" onclick="abrirPainel()">&#9881; Painel dos noivos</button>
+
+  <button class="painel-btn" onclick="abrirPainel()">⚙️ Painel dos Noivos</button>
 </div>
 
-<!-- Painel Modal -->
+<!-- Modal Painel dos Noivos -->
 <div class="painel-overlay" id="painelOverlay" onclick="fecharPainelFora(event)">
   <div class="painel-modal">
     <div class="painel-header">
       <span class="painel-title">Painel dos Noivos</span>
-      <button class="painel-close" onclick="fecharPainel()">&#215;</button>
+      <button class="painel-close" onclick="fecharPainel()">&times;</button>
     </div>
+    
     <div id="lockScreen" class="lock-screen">
-      <span class="lock-label">Acesso restrito aos noivos</span>
-      <input type="password" class="lock-input" id="senhaInput" placeholder="••••••" maxlength="20" onkeydown="if(event.key==='Enter')verificarSenha()"/>
+      <input type="password" class="lock-input" id="senhaInput" placeholder="Senha de acesso" maxlength="20" onkeydown="if(event.key==='Enter')verificarSenha()"/>
       <button class="btn-entrar" onclick="verificarSenha()">Entrar</button>
-      <div class="lock-error" id="lockError"></div>
+      <div id="lockError" style="color:#c0392b;font-size:12px;margin-top:6px;"></div>
     </div>
+
     <div id="painelContent" style="display:none;">
       <div class="stats-row-title">Cerimônia — Igreja</div>
       <div class="stats-row">
-        <div class="stat"><span class="stat-num" id="totalConf">0</span><span class="stat-lbl">Confirmados</span></div>
-        <div class="stat"><span class="stat-num" id="totalPess">0</span><span class="stat-lbl">Pessoas</span></div>
-        <div class="stat"><span class="stat-num" id="totalAgu">100</span><span class="stat-lbl">Aguardando</span></div>
-      </div>
-      <div class="progress-card">
-        <div class="progress-header"><span class="progress-label">Progresso — 100 convidados</span><span class="progress-pct" id="pct">0%</span></div>
-        <div class="progress-bar"><div class="progress-fill" id="pBar" style="width:0%"></div></div>
+        <div class="stat"><span class="stat-num" id="totalIgrejaPess">0</span><span class="stat-lbl">Pessoas</span></div>
+        <div class="stat"><span class="stat-num" id="totalIgrejaConf">0</span><span class="stat-lbl">Famílias</span></div>
       </div>
 
-      <div class="stats-row-title">Pizzaria — Convite exclusivo</div>
+      <div class="stats-row-title">Recepção — Pizzaria</div>
       <div class="stats-row">
-        <div class="stat"><span class="stat-num" id="totalPizza">0</span><span class="stat-lbl">Confirmados</span></div>
-        <div class="stat"><span class="stat-num" id="totalPessPizza">0</span><span class="stat-lbl">Pessoas</span></div>
-        <div class="stat"><span class="stat-num" id="vagasPizza">30</span><span class="stat-lbl">Vagas livres</span></div>
-      </div>
-      <div class="progress-card">
-        <div class="progress-header"><span class="progress-label">Progresso — 30 vagas</span><span class="progress-pct" id="pctPizza">0%</span></div>
-        <div class="progress-bar"><div class="progress-fill" id="pBarPizza" style="width:0%"></div></div>
+        <div class="stat"><span class="stat-num" id="totalPizzaPess">0</span><span class="stat-lbl">Pessoas</span></div>
+        <div class="stat"><span class="stat-num" id="vagasPizza">30</span><span class="stat-lbl">Vagas Restantes</span></div>
       </div>
 
-      <div class="add-section">
-        <div class="add-title">✏️ Adicionar manualmente</div>
-        <div class="add-row">
-          <div class="add-field" style="flex:2;">
-            <label>Nome</label>
-            <input type="text" id="addName" placeholder="Nome do convidado" maxlength="80"/>
-          </div>
-          <div class="add-field" style="flex:0 0 75px;">
-            <label>Pessoas</label>
-            <select id="addCount">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6+</option>
-            </select>
-          </div>
-        </div>
-        <label class="add-checkbox"><input type="checkbox" id="addPizzaria"/> Também vai à pizzaria</label>
-        <button class="btn-add" onclick="adicionarManual()">+ Adicionar</button>
-        <div class="add-msg" id="addMsg"></div>
-      </div>
+      <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin:1rem 0 0.5rem;">Lista de Confirmados</div>
+      <ul class="guest-list" id="painelList"></ul>
 
-      <div class="guest-card">
-        <div class="guest-card-title">Lista de confirmações</div>
-        <ul class="guest-list" id="painelList"><li class="empty-msg">Nenhuma confirmação ainda.</li></ul>
-      </div>
-
-      <div class="painel-actions">
-        <button class="btn-painel" style="background:var(--gold);" onclick="atualizarPainel()">↻ Atualizar</button>
-        <button class="btn-painel" style="background:#c0392b;" onclick="limparDados()">🗑 Limpar tudo</button>
-      </div>
-      <div class="last-update" id="lastUp">—</div>
+      <button onclick="limparDados()" style="width:100%;padding:8px;background:#c0392b;color:white;border:none;border-radius:6px;margin-top:1rem;cursor:pointer;font-size:12px;">🗑️ Limpar Todos os Dados</button>
     </div>
   </div>
 </div>
@@ -301,23 +273,42 @@ const TEMPLATE = 'template_casamento';
 const WPP = '5543988145521';
 const SENHA = 'Amanda2026';
 const KEY = 'casamento_aw2026_guests';
-const LIMITE_IGREJA = 100;
-const LIMITE_PIZZARIA = 30;
+
+let vaiIgreja = true;
+let vaiPizza = false;
+
+function setIgreja(status){
+  vaiIgreja = status;
+  document.getElementById('btnIgrejaSim').className = 'toggle-btn ' + (status ? 'active' : '');
+  document.getElementById('btnIgrejaNao').className = 'toggle-btn ' + (!status ? 'active' : '');
+  document.getElementById('fieldIgrejaQtd').style.display = status ? 'block' : 'none';
+}
+
+function setPizza(status){
+  vaiPizza = status;
+  document.getElementById('btnPizzaSim').className = 'toggle-btn ' + (status ? 'active' : '');
+  document.getElementById('btnPizzaNao').className = 'toggle-btn ' + (!status ? 'active' : '');
+  document.getElementById('fieldPizzaQtd').style.display = status ? 'block' : 'none';
+}
 
 function getGuests(){ try{ return JSON.parse(localStorage.getItem(KEY)) || []; } catch(e){ return []; } }
 function saveGuests(list){ localStorage.setItem(KEY, JSON.stringify(list)); }
 
 async function confirmar(){
-  const nomeEl = document.getElementById('guestName');
-  const qtdEl = document.getElementById('guestCount');
+  const nome = document.getElementById('guestName').value.trim();
   const statusMsg = document.getElementById('statusMsg');
   const btn = document.getElementById('confirmBtn');
 
-  const nome = nomeEl.value.trim();
-  const qtd = parseInt(qtdEl.value, 10);
-
   if(!nome){
     statusMsg.textContent = 'Por favor, informe seu nome completo.';
+    return;
+  }
+
+  const qtdIgreja = vaiIgreja ? parseInt(document.getElementById('qtdIgreja').value, 10) : 0;
+  const qtdPizza = vaiPizza ? parseInt(document.getElementById('qtdPizza').value, 10) : 0;
+
+  if(!vaiIgreja && !vaiPizza){
+    statusMsg.textContent = 'Selecione a presença para a Igreja ou para a Pizzaria.';
     return;
   }
 
@@ -326,86 +317,54 @@ async function confirmar(){
 
   const now = new Date().toLocaleString('pt-BR');
   const list = getGuests();
-  list.push({ nome: nome, qtd: qtd, pizzaria: false, time: now, origin: 'form' });
+  list.push({
+    nome: nome,
+    vaiIgreja: vaiIgreja,
+    qtdIgreja: qtdIgreja,
+    vaiPizza: vaiPizza,
+    qtdPizza: qtdPizza,
+    time: now
+  });
   saveGuests(list);
+
+  // Detalhes formatados para e-mail
+  const resumo = `Igreja: ${vaiIgreja ? 'SIM (' + qtdIgreja + ' pessoa/s)' : 'NÃO'} | Pizzaria: ${vaiPizza ? 'SIM (' + qtdPizza + ' pessoa/s)' : 'NÃO'}`;
 
   try {
     await emailjs.send(SERVICE, TEMPLATE, {
-      to_email: 'mostacowilian28@gmail.com, amanda.carool.pl@gmail.com',
       guest_name: nome,
-      guest_count: qtd,
+      guest_count: `Igreja: ${qtdIgreja} | Pizzaria: ${qtdPizza}`,
       confirmed_at: now,
-      tipo: 'Cerimônia (Igreja)'
+      tipo: resumo
     });
-  } catch(e){
-    console.error(e);
-  }
+  } catch(e){ console.error(e); }
 
-  mostrarSucesso(nome, qtd);
-}
-
-function mostrarSucesso(nome, qtd){
+  // Exibir tela de sucesso com botão do WhatsApp
   document.getElementById('formCard').style.display = 'none';
   const successCard = document.getElementById('successCard');
   successCard.style.display = 'block';
-  document.getElementById('successMsg').textContent =
-    'Obrigado, ' + nome + '! Confirmamos ' + qtd + (qtd === 1 ? ' pessoa.' : ' pessoas.');
 
-  const texto = encodeURIComponent(
-    'Olá! Sou ' + nome + ' e confirmo presença para ' + qtd +
-    (qtd === 1 ? ' pessoa' : ' pessoas') + ' no casamento de Amanda e Wilian.'
+  let msgSucesso = `Obrigado, ${nome}!<br>`;
+  if(vaiIgreja) msgSucesso += `• Igreja: Confirmado para ${qtdIgreja} pessoa(s).<br>`;
+  if(vaiPizza) msgSucesso += `• Pizzaria: Confirmado para ${qtdPizza} pessoa(s).`;
+
+  document.getElementById('successMsg').innerHTML = msgSucesso;
+
+  const wppText = encodeURIComponent(
+    `Olá! Sou ${nome} e confirmo minha presença no casamento de Amanda & Wilian:\n` +
+    `• Igreja: ${vaiIgreja ? 'Sim (' + qtdIgreja + ' pessoa/s)' : 'Não'}\n` +
+    `• Pizzaria: ${vaiPizza ? 'Sim (' + qtdPizza + ' pessoa/s)' : 'Não'}`
   );
-  document.getElementById('wppBtn').href = 'https://wa.me/' + WPP + '?text=' + texto;
-  document.getElementById('confirmBtn').disabled = false;
-
-  document.getElementById('receptionCard').style.display = 'none';
-  document.getElementById('btnPizzaria').style.display = 'inline-flex';
+  document.getElementById('wppBtn').href = 'https://wa.me/' + WPP + '?text=' + wppText;
 }
 
-async function mostrarPizzaria(){
-  document.getElementById('receptionCard').style.display = 'block';
-  document.getElementById('btnPizzaria').style.display = 'none';
-  document.getElementById('receptionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-  const list = getGuests();
-  let nome = '', qtd = 1;
-  if(list.length){
-    list[list.length - 1].pizzaria = true;
-    nome = list[list.length - 1].nome;
-    qtd = list[list.length - 1].qtd;
-    saveGuests(list);
-  }
-
-  try {
-    await emailjs.send(SERVICE, TEMPLATE, {
-      to_email: 'mostacowilian28@gmail.com, amanda.carool.pl@gmail.com',
-      guest_name: nome,
-      guest_count: qtd,
-      confirmed_at: new Date().toLocaleString('pt-BR'),
-      tipo: 'Pizzaria (Convite exclusivo)'
-    });
-  } catch(e){ console.error(e); }
-}
-
-function abrirPainel(){
-  document.getElementById('painelOverlay').classList.add('active');
-  document.getElementById('lockScreen').style.display = 'block';
-  document.getElementById('painelContent').style.display = 'none';
-  document.getElementById('senhaInput').value = '';
-  document.getElementById('lockError').textContent = '';
-}
-
-function fecharPainel(){
-  document.getElementById('painelOverlay').classList.remove('active');
-}
-
-function fecharPainelFora(e){
-  if(e.target === document.getElementById('painelOverlay')) fecharPainel();
-}
+/* Painel de Controle */
+function abrirPainel(){ document.getElementById('painelOverlay').classList.add('active'); }
+function fecharPainel(){ document.getElementById('painelOverlay').classList.remove('active'); }
+function fecharPainelFora(e){ if(e.target === document.getElementById('painelOverlay')) fecharPainel(); }
 
 function verificarSenha(){
-  const input = document.getElementById('senhaInput').value;
-  if(input === SENHA){
+  if(document.getElementById('senhaInput').value === SENHA){
     document.getElementById('lockScreen').style.display = 'none';
     document.getElementById('painelContent').style.display = 'block';
     atualizarPainel();
@@ -416,88 +375,37 @@ function verificarSenha(){
 
 function atualizarPainel(){
   const list = getGuests();
-  const totalConf = list.length;
-  const totalPess = list.reduce((acc, cur) => acc + cur.qtd, 0);
-  const totalPizza = list.filter(g => g.pizzaria).length;
-  const totalPessPizza = list.filter(g => g.pizzaria).reduce((acc, cur) => acc + cur.qtd, 0);
+  const totalIgrejaPess = list.reduce((acc, c) => acc + (c.qtdIgreja || 0), 0);
+  const totalIgrejaConf = list.filter(c => c.vaiIgreja).length;
+  const totalPizzaPess = list.reduce((acc, c) => acc + (c.qtdPizza || 0), 0);
 
-  document.getElementById('totalConf').textContent = totalConf;
-  document.getElementById('totalPess').textContent = totalPess;
-  document.getElementById('totalAgu').textContent = Math.max(0, LIMITE_IGREJA - totalPess);
-  
-  const pctIgreja = Math.min(100, Math.round((totalPess / LIMITE_IGREJA) * 100));
-  document.getElementById('pct').textContent = pctIgreja + '%';
-  document.getElementById('pBar').style.width = pctIgreja + '%';
-
-  document.getElementById('totalPizza').textContent = totalPizza;
-  document.getElementById('totalPessPizza').textContent = totalPessPizza;
-  document.getElementById('vagasPizza').textContent = Math.max(0, LIMITE_PIZZARIA - totalPessPizza);
-
-  const pctPizza = Math.min(100, Math.round((totalPessPizza / LIMITE_PIZZARIA) * 100));
-  document.getElementById('pctPizza').textContent = pctPizza + '%';
-  document.getElementById('pBarPizza').style.width = pctPizza + '%';
+  document.getElementById('totalIgrejaPess').textContent = totalIgrejaPess;
+  document.getElementById('totalIgrejaConf').textContent = totalIgrejaConf;
+  document.getElementById('totalPizzaPess').textContent = totalPizzaPess;
+  document.getElementById('vagasPizza').textContent = Math.max(0, 30 - totalPizzaPess);
 
   const ul = document.getElementById('painelList');
   ul.innerHTML = '';
-
-  if(list.length === 0){
-    ul.innerHTML = '<li class="empty-msg">Nenhuma confirmação ainda.</li>';
+  if(!list.length){
+    ul.innerHTML = '<li style="font-size:12px;color:var(--mid);text-align:center;padding:1rem;">Nenhuma confirmação ainda.</li>';
   } else {
-    list.forEach((g, index) => {
+    list.forEach(g => {
       const li = document.createElement('li');
       li.className = 'guest-item';
       li.innerHTML = `
-        <span class="guest-name"><b>${g.nome}</b> (${g.qtd} ${g.qtd === 1 ? 'pessoa' : 'pessoas'})</span>
-        ${g.pizzaria ? '<span class="guest-badge">🍕 Pizzaria</span>' : ''}
-        <button class="guest-remove" onclick="removerConvidado(${index})" title="Remover">&times;</button>
+        <span><b>${g.nome}</b></span>
+        <div>
+          ${g.vaiIgreja ? `<span class="guest-badge">⛪ ${g.qtdIgreja}</span>` : ''}
+          ${g.vaiPizza ? `<span class="guest-badge">🍕 ${g.qtdPizza}</span>` : ''}
+        </div>
       `;
       ul.appendChild(li);
     });
   }
-
-  document.getElementById('lastUp').textContent = 'Atualizado às ' + new Date().toLocaleTimeString('pt-BR');
-}
-
-function adicionarManual(){
-  const nameEl = document.getElementById('addName');
-  const countEl = document.getElementById('addCount');
-  const pizzariaEl = document.getElementById('addPizzaria');
-  const msgEl = document.getElementById('addMsg');
-
-  const nome = nameEl.value.trim();
-  const qtd = parseInt(countEl.value, 10);
-  const pizzaria = pizzariaEl.checked;
-
-  if(!nome){
-    msgEl.textContent = 'Informe o nome.';
-    msgEl.style.color = '#c0392b';
-    return;
-  }
-
-  const list = getGuests();
-  list.push({ nome: nome, qtd: qtd, pizzaria: pizzaria, time: new Date().toLocaleString('pt-BR'), origin: 'manual' });
-  saveGuests(list);
-
-  nameEl.value = '';
-  pizzariaEl.checked = false;
-  msgEl.textContent = 'Adicionado com sucesso!';
-  msgEl.style.color = '#27ae60';
-  setTimeout(() => msgEl.textContent = '', 2000);
-
-  atualizarPainel();
-}
-
-function removerConvidado(index){
-  if(confirm('Deseja remover esta confirmação?')){
-    const list = getGuests();
-    list.splice(index, 1);
-    saveGuests(list);
-    atualizarPainel();
-  }
 }
 
 function limparDados(){
-  if(confirm('Tem certeza que deseja apagar TODAS as confirmações salvas?')){
+  if(confirm('Tem certeza que deseja apagar todas as confirmações?')){
     localStorage.removeItem(KEY);
     atualizarPainel();
   }
