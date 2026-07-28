@@ -37,9 +37,11 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 .location-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
 .location-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--dark);}
 .location-sub{font-size:13px;color:var(--mid);font-style:italic;margin-top:2px;}
+.btn-maps{display:inline-flex;align-items:center;gap:6px;padding:9px 22px;margin-top:14px;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;background:transparent;border:1.5px solid var(--gold-light);color:var(--mid);border-radius:30px;text-decoration:none;transition:background 0.2s,color 0.2s;}
+.btn-maps:hover{background:var(--gold);color:white;border-color:var(--gold);}
+.farewell-note{font-size:13px;color:var(--mid);font-style:italic;margin-top:12px;}
 .verse{font-size:14px;font-style:italic;color:var(--mid);line-height:1.8;max-width:360px;margin:0 auto;}
 .verse cite{display:block;font-size:11px;font-style:normal;letter-spacing:0.1em;color:var(--gold);margin-top:6px;text-transform:uppercase;}
-.farewell{display:block;font-size:15px;font-weight:500;color:var(--dark);margin-top:15px;font-style:normal;}
 .form-card{background:white;border:1px solid var(--light);border-radius:16px;padding:2rem 1.75rem;margin-bottom:1.5rem;}
 .form-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--dark);text-align:center;margin-bottom:1.5rem;}
 .field{margin-bottom:1.1rem;}
@@ -58,6 +60,41 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 .success-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--dark);margin-bottom:0.5rem;}
 .success-msg{font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:1.5rem;font-style:italic;}
 .btn-wpp-confirm{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;background:#25D366;color:white;border:none;border-radius:8px;cursor:pointer;text-decoration:none;}
+.btn-pizzaria{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;background:var(--gold);color:white;border:none;border-radius:8px;cursor:pointer;margin-top:0.75rem;transition:background 0.2s;}
+.btn-pizzaria:hover{background:var(--gold-light);}
+.reception-card{background:white;border:1px solid var(--light);border-radius:16px;padding:2rem 1.75rem;margin-bottom:1.5rem;text-align:center;}
+.reception-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:0.5rem;}
+.reception-title{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:500;color:var(--dark);margin-bottom:0.85rem;}
+.reception-text{font-size:14px;color:var(--mid);line-height:1.7;max-width:400px;margin:0 auto 1rem;}
+.reception-text b{color:var(--dark);font-weight:600;}
+.reception-menu{font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.6rem;}
+.reception-list{list-style:none;font-size:15px;color:var(--dark);margin:0 auto 1.1rem;text-align:left;display:inline-block;font-family:'Cormorant Garamond',serif;}
+.reception-list li{padding:3px 0;}
+.reception-prices{background:var(--gold-pale);border-radius:10px;padding:0.85rem 1rem;margin-bottom:1.1rem;font-size:14px;color:var(--dark);line-height:1.7;}
+.reception-prices b{color:var(--gold);}
+.reception-deadline{font-size:13px;color:var(--mid);font-style:italic;line-height:1.7;margin-bottom:1.1rem;}
+.btn-reception-confirm{display:inline-flex;align-items:center;gap:8px;padding:11px 26px;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:500;background:var(--gold);color:white;border:none;border-radius:8px;cursor:pointer;text-decoration:none;transition:background 0.2s;}
+.btn-reception-confirm:hover{background:var(--gold-light);}
+.reception-closing{font-size:14px;color:var(--mid);font-style:italic;margin-top:1rem;}
+.gmail-section{background:white;border:1px solid var(--light);border-radius:10px;padding:1rem;margin-bottom:1rem;}
+.gmail-title{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--dark);margin-bottom:0.75rem;}
+.gmail-status{font-size:12px;color:var(--mid);text-align:center;margin-top:8px;min-height:16px;font-style:italic;}
+.gmail-status.ok{color:#27ae60;}
+.gmail-status.err{color:#c0392b;}
+.stats-row-title{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);margin:0.5rem 0 0.5rem;}
+.add-section{background:white;border:1px solid var(--light);border-radius:10px;padding:1rem;margin-bottom:1rem;}
+.add-title{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--dark);margin-bottom:0.75rem;}
+.add-row{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;}
+.add-field{flex:1;min-width:130px;}
+.add-field label{display:block;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:4px;}
+.add-field input,.add-field select{width:100%;font-family:'EB Garamond',serif;font-size:14px;padding:9px 10px;border:1px solid var(--light);border-radius:7px;background:var(--cream);color:var(--dark);outline:none;appearance:none;}
+.add-checkbox{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);margin:10px 0;}
+.btn-add{width:100%;padding:9px 18px;background:#27ae60;color:white;border:none;border-radius:7px;cursor:pointer;font-family:'EB Garamond',serif;font-size:14px;white-space:nowrap;transition:background 0.2s;}
+.btn-add:hover{background:#219a52;}
+.add-msg{font-size:12px;margin-top:6px;font-style:italic;min-height:16px;}
+.guest-origin{font-size:10px;color:var(--mid);font-style:italic;display:block;}
+.painel-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:0.5rem;}
+.btn-painel{flex:1;padding:11px;font-family:'EB Garamond',serif;font-size:13px;border:none;border-radius:8px;cursor:pointer;transition:background 0.2s;color:white;}
 .presentes-card{background:white;border:1px solid var(--light);border-radius:16px;padding:1.75rem;margin-bottom:1.5rem;text-align:center;}
 .presentes-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;}
 .presentes-msg{font-size:14px;color:var(--mid);font-style:italic;line-height:1.6;margin-bottom:1.25rem;}
@@ -100,6 +137,8 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 .empty-msg{font-size:13px;color:var(--mid);text-align:center;padding:1.5rem 0;font-style:italic;}
 .btn-refresh{width:100%;padding:10px;font-size:14px;letter-spacing:0.08em;background:var(--gold);color:white;border:none;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity 0.15s;}
 .btn-refresh:hover{opacity:0.88;}
+.btn-clear{width:100%;padding:9px;font-size:13px;letter-spacing:0.06em;background:transparent;color:#c0392b;border:1px solid #e0b4ac;border-radius:8px;cursor:pointer;margin-top:0.6rem;transition:background 0.15s;}
+.btn-clear:hover{background:#fbeae7;}
 .btn-gmail{width:100%;padding:10px;font-size:14px;letter-spacing:0.08em;background:#4285F4;color:white;border:none;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity 0.15s;margin-bottom:0.75rem;}
 .btn-gmail:hover{opacity:0.88;}
 .btn-gmail:disabled{opacity:0.6;cursor:not-allowed;}
@@ -131,12 +170,13 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
       <div class="location-label">Local da cerimônia</div>
       <div class="location-name">Matriz de Ibiporã</div>
       <div class="location-sub">Nossa Senhora da Paz</div>
+      <a class="btn-maps" href="https://maps.app.goo.gl/5kxW93DXSLyDcDQ66" target="_blank">📍 Me leve até lá</a>
+      <div class="farewell-note">Os noivos se despedem na igreja</div>
     </div>
     <div class="divider"><div class="div-line"></div><div class="div-diamond"></div><div class="div-line"></div></div>
     <p class="verse">
         "O amor é paciente, o amor é bondoso... tudo suporta, tudo crê, tudo espera, tudo persevera."
         <cite>1 Coríntios 13:4–7</cite>
-        <span class="farewell">Os noivos se despedem na igreja!</span>
     </p>
   </div>
   <div class="presentes-card">
@@ -172,6 +212,24 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
       <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Avisar os noivos pelo WhatsApp
     </a>
+    <button class="btn-pizzaria" id="btnPizzaria" onclick="mostrarPizzaria()">🍕 Fui convidado(a) para a Pizzaria</button>
+  </div>
+  <div class="reception-card" id="receptionCard" style="display:none;">
+    <div class="reception-label">É um convite especial!</div>
+    <div class="reception-title">Vamos continuar juntos? 🍕</div>
+    <p class="reception-text">Os noivos se despedem dos convidados na igreja, mas após a cerimônia, a partir das <b>18h30</b>, reservamos um espaço exclusivo na <b>Pizzaria O Casarão</b> (<a href="https://instagram.com/ocasaraotwohalfspizza" target="_blank" style="color:var(--gold);text-decoration:none;">@ocasaraotwohalfspizza</a>) para um grupo reduzido de <b>30 pessoas</b> especialmente convidadas para continuar a celebração ao lado de familiares e amigos mais próximos.</p>
+    <div class="reception-menu">O rodízio inclui</div>
+    <ul class="reception-list">
+      <li>• Pizzas</li>
+      <li>• Buffet de massas e petiscos</li>
+      <li>• Refrigerante</li>
+    </ul>
+    <div class="reception-prices">
+      Valor: <b>R$ 58,90</b> por pessoa<br>
+      Crianças de 4 a 7 anos: <b>R$ 29,95</b>
+    </div>
+    <p class="reception-deadline">Sua presença na pizzaria já está anotada! Pedimos só a gentileza de confirmar até o dia <b>08/08</b>, para que possamos nos organizar com a pizzaria.</p>
+    <p class="reception-closing">Será uma alegria celebrar esse dia ao seu lado!</p>
   </div>
   <button class="painel-btn" onclick="abrirPainel()">&#9881; Painel dos noivos</button>
 </div>
@@ -188,10 +246,16 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
       <div class="lock-error" id="lockError"></div>
     </div>
     <div id="painelContent" style="display:none;">
-      <button class="btn-gmail" id="btnGmail" onclick="buscarGmail()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.908 1.528-1.147C21.69 2.28 24 3.434 24 5.457z"/></svg>
-        Sincronizar com Gmail
-      </button>
+      <div class="gmail-section">
+        <div class="gmail-title">📬 Sincronizar com Gmail</div>
+        <button class="btn-gmail" id="btnGmail" onclick="sincronizarGmail()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.908 1.528-1.147C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          Buscar confirmações do Gmail
+        </button>
+        <div class="gmail-status" id="gmailStatus">Clique para importar as confirmações recebidas por e-mail</div>
+      </div>
+
+      <div class="stats-row-title">Cerimônia — Igreja</div>
       <div class="stats-row">
         <div class="stat"><span class="stat-num" id="totalConf">0</span><span class="stat-lbl">Confirmados</span></div>
         <div class="stat"><span class="stat-num" id="totalPess">0</span><span class="stat-lbl">Pessoas</span></div>
@@ -201,14 +265,51 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
         <div class="progress-header"><span class="progress-label">Progresso — 100 convidados</span><span class="progress-pct" id="pct">0%</span></div>
         <div class="progress-bar"><div class="progress-fill" id="pBar" style="width:0%"></div></div>
       </div>
+
+      <div class="stats-row-title">Pizzaria — Convite exclusivo</div>
+      <div class="stats-row">
+        <div class="stat"><span class="stat-num" id="totalPizza">0</span><span class="stat-lbl">Confirmados</span></div>
+        <div class="stat"><span class="stat-num" id="totalPessPizza">0</span><span class="stat-lbl">Pessoas</span></div>
+        <div class="stat"><span class="stat-num" id="vagasPizza">30</span><span class="stat-lbl">Vagas livres</span></div>
+      </div>
+      <div class="progress-card">
+        <div class="progress-header"><span class="progress-label">Progresso — 30 vagas</span><span class="progress-pct" id="pctPizza">0%</span></div>
+        <div class="progress-bar"><div class="progress-fill" id="pBarPizza" style="width:0%"></div></div>
+      </div>
+
+      <div class="add-section">
+        <div class="add-title">✏️ Adicionar manualmente</div>
+        <div class="add-row">
+          <div class="add-field" style="flex:2;">
+            <label>Nome</label>
+            <input type="text" id="addName" placeholder="Nome do convidado" maxlength="80"/>
+          </div>
+          <div class="add-field" style="flex:0 0 75px;">
+            <label>Pessoas</label>
+            <select id="addCount">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6+</option>
+            </select>
+          </div>
+        </div>
+        <label class="add-checkbox"><input type="checkbox" id="addPizzaria"/> Também vai à pizzaria</label>
+        <button class="btn-add" onclick="adicionarManual()">+ Adicionar</button>
+        <div class="add-msg" id="addMsg"></div>
+      </div>
+
       <div class="guest-card">
         <div class="guest-card-title">Lista de confirmações</div>
         <ul class="guest-list" id="painelList"><li class="empty-msg">Nenhuma confirmação ainda.</li></ul>
       </div>
-      <button class="btn-refresh" onclick="atualizarPainel()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
-        Atualizar lista (cache local)
-      </button>
+
+      <div class="painel-actions">
+        <button class="btn-painel" style="background:var(--gold);" onclick="atualizarPainel()">↻ Atualizar</button>
+        <button class="btn-painel" style="background:#c0392b;" onclick="limparDados()">🗑 Limpar tudo</button>
+      </div>
       <div class="last-update" id="lastUp">—</div>
     </div>
   </div>
@@ -216,7 +317,321 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script>
-emailjs.init('h33oxWzwErwi8kwUF');
-var WPP='5543988145521',SENHA='amanda2026',KEY='wedding_aw2026_guests';
+const GMAIL_CLIENT_ID = '600221063854-431dj3a5hh91lr3bftjrgfnjehf74hda.apps.googleusercontent.com';
+const GMAIL_SCOPE     = 'https://www.googleapis.com/auth/gmail.readonly';
 
-// ----- Confirmação normal (form), inaltera
+emailjs.init('h33oxWzwErwi8kwUF');
+const SERVICE = 'service_5nd34jt';      // mesmo serviço de e-mail usado no Chá Bar
+const TEMPLATE = 'template_casamento';  // <-- crie este template no EmailJS (veja instruções)
+const WPP = '5543988145521';
+const SENHA = 'Amanda2026';
+const KEY = 'casamento_aw2026_guests';
+const LIMITE_IGREJA = 100;
+const LIMITE_PIZZARIA = 30;
+
+let tokenClient = null;
+let accessToken = null;
+
+function getGuests(){ try{ return JSON.parse(localStorage.getItem(KEY)) || []; } catch(e){ return []; } }
+function saveGuests(list){ localStorage.setItem(KEY, JSON.stringify(list)); }
+
+window.addEventListener('load', () => {
+  if(typeof google === 'undefined') return;
+  tokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: GMAIL_CLIENT_ID,
+    scope: GMAIL_SCOPE,
+    callback: async (resp) => {
+      if(resp.error){ setGmailStatus('Erro ao autenticar: ' + resp.error, 'err'); return; }
+      accessToken = resp.access_token;
+      await buscarEmailsConfirmacao();
+    }
+  });
+});
+
+// ----- Confirmação da cerimônia (formulário) -----
+async function confirmar(){
+  const nomeEl = document.getElementById('guestName');
+  const qtdEl = document.getElementById('guestCount');
+  const statusMsg = document.getElementById('statusMsg');
+  const btn = document.getElementById('confirmBtn');
+
+  const nome = nomeEl.value.trim();
+  const qtd = parseInt(qtdEl.value, 10);
+
+  if(!nome){
+    statusMsg.textContent = 'Por favor, informe seu nome completo.';
+    return;
+  }
+
+  btn.disabled = true;
+  statusMsg.textContent = 'Enviando confirmação...';
+
+  const now = new Date().toLocaleString('pt-BR');
+  const list = getGuests();
+  list.push({ nome: nome, qtd: qtd, pizzaria: false, time: now, origin: 'form' });
+  saveGuests(list);
+
+  try {
+    await emailjs.send(SERVICE, TEMPLATE, {
+      to_email: 'mostacowilian28@gmail.com, amanda.carool.pl@gmail.com',
+      guest_name: nome,
+      guest_count: qtd,
+      confirmed_at: now,
+      tipo: 'Cerimônia (Igreja)'
+    });
+  } catch(e){
+    console.error(e);
+    // A confirmação já foi salva localmente mesmo que o e-mail falhe
+  }
+
+  mostrarSucesso(nome, qtd);
+}
+
+function mostrarSucesso(nome, qtd){
+  document.getElementById('formCard').style.display = 'none';
+  const successCard = document.getElementById('successCard');
+  successCard.style.display = 'block';
+  document.getElementById('successMsg').textContent =
+    'Obrigado, ' + nome + '! Confirmamos ' + qtd + (qtd === 1 ? ' pessoa.' : ' pessoas.');
+
+  const texto = encodeURIComponent(
+    'Olá! Sou ' + nome + ' e confirmo presença para ' + qtd +
+    (qtd === 1 ? ' pessoa' : ' pessoas') + ' no casamento de Amanda e Wilian.'
+  );
+  document.getElementById('wppBtn').href = 'https://wa.me/' + WPP + '?text=' + texto;
+  document.getElementById('confirmBtn').disabled = false;
+
+  document.getElementById('receptionCard').style.display = 'none';
+  document.getElementById('btnPizzaria').style.display = 'inline-flex';
+}
+
+// ----- Confirmação da pizzaria (convite exclusivo) -----
+async function mostrarPizzaria(){
+  document.getElementById('receptionCard').style.display = 'block';
+  document.getElementById('btnPizzaria').style.display = 'none';
+  document.getElementById('receptionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  const list = getGuests();
+  let nome = '', qtd = 1;
+  if(list.length){
+    list[list.length - 1].pizzaria = true;
+    nome = list[list.length - 1].nome;
+    qtd = list[list.length - 1].qtd;
+    saveGuests(list);
+  }
+
+  try {
+    await emailjs.send(SERVICE, TEMPLATE, {
+      to_email: 'mostacowilian28@gmail.com, amanda.carool.pl@gmail.com',
+      guest_name: nome,
+      guest_count: qtd,
+      confirmed_at: new Date().toLocaleString('pt-BR'),
+      tipo: 'Pizzaria (Convite exclusivo)'
+    });
+  } catch(e){ console.error(e); }
+}
+
+// ----- Painel dos noivos -----
+function abrirPainel(){ document.getElementById('painelOverlay').classList.add('active'); }
+function fecharPainel(){ document.getElementById('painelOverlay').classList.remove('active'); }
+function fecharPainelFora(e){ if(e.target.id === 'painelOverlay') fecharPainel(); }
+
+function verificarSenha(){
+  const input = document.getElementById('senhaInput').value;
+  const erro = document.getElementById('lockError');
+  if(input === SENHA){
+    erro.textContent = '';
+    document.getElementById('lockScreen').style.display = 'none';
+    document.getElementById('painelContent').style.display = 'block';
+    atualizarPainel();
+  } else {
+    erro.textContent = 'Senha incorreta.';
+  }
+}
+
+function sincronizarGmail(){
+  if(!tokenClient){ setGmailStatus('Recarregue a página e tente novamente.', 'err'); return; }
+  setGmailStatus('Aguardando autorização do Google...', '');
+  tokenClient.requestAccessToken();
+}
+
+async function buscarEmailsConfirmacao(){
+  setGmailStatus('🔍 Buscando e-mails de confirmação...', '');
+  try {
+    const query = encodeURIComponent('subject:("Casamento" "Confirmação")');
+    const listRes = await fetch(
+      `https://gmail.googleapis.com/gmail/v1/users/me/messages?maxResults=300&q=${query}`,
+      { headers: { Authorization: 'Bearer ' + accessToken } }
+    );
+    const listData = await listRes.json();
+
+    if(!listData.messages || listData.messages.length === 0){
+      setGmailStatus('Nenhum e-mail de confirmação encontrado.', 'err');
+      return;
+    }
+
+    const guests = getGuests();
+    let novos = 0, atualizados = 0;
+
+    for(const msg of listData.messages){
+      const msgRes = await fetch(
+        `https://gmail.googleapis.com/gmail/v1/users/me/messages/${msg.id}?format=full`,
+        { headers: { Authorization: 'Bearer ' + accessToken } }
+      );
+      const msgData = await msgRes.json();
+      const headers = msgData.payload.headers || [];
+      const subjectHeader = headers.find(h => h.name === 'Subject');
+      const subject = subjectHeader ? subjectHeader.value : '';
+      const isPizzaria = /pizzaria/i.test(subject);
+
+      const body = extrairCorpo(msgData);
+      if(!body) continue;
+
+      const nomeMatch = body.match(/Nome:\s*(.+)/i);
+      const pessoasMatch = body.match(/Pessoas:\s*(\d+)/i);
+      if(!nomeMatch) continue;
+
+      const nome = nomeMatch[1].trim();
+      const pessoas = pessoasMatch ? parseInt(pessoasMatch[1]) : 1;
+      const now = new Date().toLocaleString('pt-BR');
+
+      let guest = guests.find(g => g.nome.toLowerCase() === nome.toLowerCase());
+      if(!guest){
+        guest = { nome: nome, qtd: pessoas, pizzaria: false, time: now, origin: 'gmail' };
+        guests.push(guest);
+        novos++;
+      }
+      if(isPizzaria && !guest.pizzaria){
+        guest.pizzaria = true;
+        atualizados++;
+      }
+    }
+
+    saveGuests(guests);
+    atualizarPainel();
+
+    if(novos === 0 && atualizados === 0){
+      setGmailStatus('✔ Já sincronizado — nenhuma novidade.', 'ok');
+    } else {
+      setGmailStatus(`✔ ${novos} novo(s) convidado(s), ${atualizados} confirmação(ões) de pizzaria atualizada(s).`, 'ok');
+    }
+  } catch(e){
+    console.error(e);
+    setGmailStatus('Erro ao buscar e-mails. Tente novamente.', 'err');
+  }
+}
+
+function extrairCorpo(msgData){
+  try {
+    const parts = msgData.payload.parts || [msgData.payload];
+    for(const part of parts){
+      if(part.mimeType === 'text/plain' && part.body && part.body.data){
+        return atob(part.body.data.replace(/-/g,'+').replace(/_/g,'/'));
+      }
+    }
+    if(msgData.payload.body && msgData.payload.body.data){
+      return atob(msgData.payload.body.data.replace(/-/g,'+').replace(/_/g,'/'));
+    }
+  } catch(e){}
+  return null;
+}
+
+function setGmailStatus(msg, tipo){
+  const el = document.getElementById('gmailStatus');
+  el.textContent = msg;
+  el.className = 'gmail-status' + (tipo ? ' ' + tipo : '');
+}
+
+function adicionarManual(){
+  const nameEl = document.getElementById('addName');
+  const cntEl = document.getElementById('addCount');
+  const pizzaEl = document.getElementById('addPizzaria');
+  const msg = document.getElementById('addMsg');
+  msg.textContent = '';
+
+  const nome = nameEl.value.trim();
+  if(!nome){ msg.style.color = '#c0392b'; msg.textContent = 'Informe o nome.'; return; }
+
+  const guests = getGuests();
+  if(guests.some(g => g.nome.toLowerCase() === nome.toLowerCase())){
+    msg.style.color = '#e67e22'; msg.textContent = `"${nome}" já está na lista.`; return;
+  }
+
+  const now = new Date().toLocaleString('pt-BR');
+  guests.unshift({ nome: nome, qtd: parseInt(cntEl.value, 10), pizzaria: pizzaEl.checked, time: now, origin: 'manual' });
+  saveGuests(guests);
+
+  nameEl.value = ''; cntEl.value = '1'; pizzaEl.checked = false;
+  msg.style.color = '#27ae60'; msg.textContent = `✔ ${nome} adicionado!`;
+  setTimeout(() => msg.textContent = '', 3000);
+  atualizarPainel();
+}
+
+function atualizarPainel(){
+  const list = getGuests();
+  const totalConf = list.length;
+  const totalPess = list.reduce((s, g) => s + (g.qtd || 1), 0);
+  const pctIgreja = Math.min(Math.round((totalPess / LIMITE_IGREJA) * 100), 100);
+
+  document.getElementById('totalConf').textContent = totalConf;
+  document.getElementById('totalPess').textContent = totalPess;
+  document.getElementById('totalAgu').textContent = Math.max(LIMITE_IGREJA - totalPess, 0);
+  document.getElementById('pct').textContent = pctIgreja + '%';
+  document.getElementById('pBar').style.width = pctIgreja + '%';
+
+  const pizzariaList = list.filter(g => g.pizzaria);
+  const totalPizza = pizzariaList.length;
+  const totalPessPizza = pizzariaList.reduce((s, g) => s + (g.qtd || 1), 0);
+  const pctPizza = Math.min(Math.round((totalPessPizza / LIMITE_PIZZARIA) * 100), 100);
+
+  document.getElementById('totalPizza').textContent = totalPizza;
+  document.getElementById('totalPessPizza').textContent = totalPessPizza;
+  document.getElementById('vagasPizza').textContent = Math.max(LIMITE_PIZZARIA - totalPessPizza, 0);
+  document.getElementById('pctPizza').textContent = pctPizza + '%';
+  document.getElementById('pBarPizza').style.width = pctPizza + '%';
+
+  const ul = document.getElementById('painelList');
+  const originLabel = { form: '🌐 site', gmail: '📬 e-mail', manual: '✏️ manual' };
+  ul.innerHTML = '';
+  if(list.length === 0){
+    ul.innerHTML = '<li class="empty-msg">Nenhuma confirmação ainda.</li>';
+  } else {
+    list.slice().reverse().forEach((g, idx) => {
+      const realIndex = list.length - 1 - idx;
+      const li = document.createElement('li');
+      li.className = 'guest-item';
+      li.innerHTML =
+        '<span class="guest-name"></span>' +
+        '<span class="guest-badge"></span>' +
+        (g.pizzaria ? '<span class="guest-badge">🍕</span>' : '') +
+        '<button class="guest-remove" onclick="removerConvidado(' + realIndex + ')">&times;</button>';
+      const nameSpan = li.querySelector('.guest-name');
+      nameSpan.textContent = g.nome;
+      const originSpan = document.createElement('span');
+      originSpan.className = 'guest-origin';
+      originSpan.textContent = (originLabel[g.origin] || '') + ' · ' + (g.time || '');
+      nameSpan.appendChild(originSpan);
+      li.querySelector('.guest-badge').textContent = g.qtd + (g.qtd === 1 ? ' pessoa' : ' pessoas');
+      ul.appendChild(li);
+    });
+  }
+  document.getElementById('lastUp').textContent = 'Atualizado em ' + new Date().toLocaleTimeString('pt-BR');
+}
+
+function removerConvidado(index){
+  const list = getGuests();
+  if(!confirm(`Remover "${list[index].nome}"?`)) return;
+  list.splice(index, 1);
+  saveGuests(list);
+  atualizarPainel();
+}
+
+function limparDados(){
+  if(confirm('Tem certeza que deseja apagar todas as confirmações salvas neste navegador? Esta ação não pode ser desfeita.')){
+    saveGuests([]);
+    atualizarPainel();
+  }
+}
+</script>
+</body>
+</html>
